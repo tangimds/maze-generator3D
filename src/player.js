@@ -25,8 +25,8 @@ class Player {
     for (let i = -half_fov; i < half_fov; i += finesse) {
       this.rays.push(new Ray(this.pos, radians(i) + this.head));
     }
-    print("rectSize",ceil(edgeSize/this.rays.length));
-    print("rays.length",this.rays.length);
+    // print("rectSize",ceil(edgeSize/this.rays.length));
+    // print("rays.length",this.rays.length);
   }
 
   show() {
@@ -143,7 +143,7 @@ class Player {
       else dy = ceil(dy);
       
       if (distance < 3) {
-        print("SHORT");
+        //print("SHORT");
         if (dx > 0 && dx <= 3) this.canRIGHT = false;
         if (dx < 0 && dx >= -3) this.canLEFT = false;
         if (dy > 0 && dy <= 3) this.canDOWN = false;
